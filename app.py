@@ -1,6 +1,8 @@
 import json
 
 from flask import Flask, render_template, request
+import RPi.GPIO as GPIO
+import time
 
 app = Flask(__name__)
 
@@ -31,14 +33,24 @@ class Shimeji():
         pass
 
     def light_up(self, sec=0):
-        # TODO
         # light up during sec(sec), after passed sec time turn off light.
         # if sec = 0, never turn off. please call light_down function.
-        pass
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(11, GPIO.OUT)
+        if sec<=0:
+            GPIO.output(11, True)
+            return
+        else:
+            GPIO.output(11, True)
+            time.sleep(sec)
+            GPIO.output(11, False)
+            return
 
     def light_down(self):
-        # TODO
-        pass
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(11, GPIO.OUT)
+        GPIO.output(11, False)
+        return
 
     def open(self):
         # TODO
@@ -50,12 +62,11 @@ class Shimeji():
         # close top
         pass
 
+shimeji = Shimeji()
 
 def shimeji_controller(action_type, param):
-    pass
-
-
-shimeji = Shimeji()
+    if action_type == "light_up":
+        shimeji.is_lighting_up(param["sec"])
 
 
 @app.route('/action', methods=["GET", "POST"])

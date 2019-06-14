@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>shimeji sample</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
 <div class='main'>
-    <img src='./image/kinococo.png' alt='kinococo' class='kinococo_img'>
-    <button type='button' v-on:click="handleClick" class='moku1'><img src='./image/moku1.png' alt='mokumoku'></button>
-    <button type='button' v-on:click="handleClick" class='moku2'><img src='./image/moku2.png' alt='mokumoku'></button>
-    <button type='button' v-on:click="handleClick" class='moku3'><img src='./image/moku3.png' alt='mokumoku'></button>
-    <button type='button' v-on:click="handleClick" class='moku4'><img src='./image/moku3.png' alt='mokumoku'></button>
-    <button type='button' v-on:click="handleClick" class='moku5'><img src='./image/moku2.png' alt='mokumoku'></button>
-    <button type='button' v-on:click="handleClick" class='moku6'><img src='./image/moku4.png' alt='mokumoku'></button>
-    <button type='button' v-on:click="handleClick" class='moku7'><img src='./image/moku4.png' alt='mokumoku'></button>
+    <img src='/static/kinococo.png' alt='kinococo' class='kinococo_img'>
+    <button type='button' v-on:click="handleClick" class='moku1'><img src='/static/moku1.png' alt='mokumoku'></button>
+    <button type='button' v-on:click="handleClick" class='moku2'><img src='/static/moku2.png' alt='mokumoku'></button>
+    <button type='button' v-on:click="handleClick" class='moku3'><img src='/static/moku3.png' alt='mokumoku'></button>
+    <button type='button' v-on:click="handleClick" class='moku4'><img src='/static/moku3.png' alt='mokumoku'></button>
+    <button type='button' v-on:click="handleClick" class='moku5'><img src='/static/moku2.png' alt='mokumoku'></button>
+    <button type='button' v-on:click="handleClick" class='moku6'><img src='/static/moku4.png' alt='mokumoku'></button>
+    <button type='button' v-on:click="handleClick" class='moku7'><img src='/static/moku4.png' alt='mokumoku'></button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </script>
-<script src="./main.js"></script>
+<script src="/static/main.js"></script>
 </body>
 </html>

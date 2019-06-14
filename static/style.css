@@ -1,0 +1,50 @@
+body{
+    background-color: #8aaea9;
+    width: 100%;
+}
+div.main{
+    width: 100%;
+}
+.kinococo_img{
+    width: 80%;
+    position: relative;
+    margin: 40% 10%;
+}
+.main button img{
+    position: absolute;
+}
+.main .moku1 img{
+    width: 50%;
+    top: 90px;
+    left: 10px;
+}
+.main .moku2 img{
+    top: 280px;
+    right: 30px;
+    width: 40%;
+}
+.main .moku3 img{
+    top: 30px;
+    right: 10px;
+    width: 45%;
+}
+.main .moku4 img{
+    bottom: 430px;
+    right: 10px;
+    width: 45%;
+}
+.main .moku5 img{
+    bottom: 190px;
+    left: 20px;
+    width: 45%;
+}
+.main .moku6 img{
+    bottom: 30px;
+    right: 20px;
+    width: 45%;
+}
+.main .moku7 img{
+    top: 450px;
+    left: 20px;
+    width: 35%;
+}

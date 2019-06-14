@@ -1,7 +1,7 @@
 var app = new Vue({
     el: '.main',
     data:{      //ここで定義した値がv-model="hoge"や{{hoge}}の初期値に反映される
-        url:"http://localhost:5000/action",//v-model="url"の初期値
+        url: location.href + "action",      //v-model="url"の初期値
         param:"{'sec':'4'}", //v-model="param"の初期値
     },
     methods: {

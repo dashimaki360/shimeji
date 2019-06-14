@@ -99,6 +99,7 @@ def action():
         print("post req")
         data = request.json
         shimeji.blow_mist(4)
+        return "thank you"
         # return shimeji_controller(data["type"], data["param"])
 
 
